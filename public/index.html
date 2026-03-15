@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClassifyRight — Contractor Misclassification Risk Scanner</title>
+  <meta name="description" content="Avoid IRS audits and DOL penalties. Scan your contractor relationship for misclassification risk in under 5 minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #1e293b; }
+    * { box-sizing: border-box; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 antialiased">
+
+  <!-- Nav -->
+  <nav class="bg-[#1a2744] border-b border-[#243460]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <span class="text-white font-bold text-lg tracking-tight">ClassifyRight</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="/#pricing" class="text-slate-300 hover:text-white text-sm font-medium transition-colors">Pricing</a>
+        <a href="/scan" class="bg-white text-[#1a2744] text-sm font-semibold px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors">Start Free Scan</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-[#1a2744] text-white pt-20 pb-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 25px 25px, white 2%, transparent 0%), radial-gradient(circle at 75px 75px, white 2%, transparent 0%); background-size: 100px 100px;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto text-center">
+      <!-- Trust badge -->
+      <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-full px-4 py-2 text-sm font-medium text-slate-200 mb-8">
+        <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        IRS &amp; DOL Compliance Tool
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+        Is your contractor actually<br />
+        <span class="text-amber-400">an employee?</span>
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Find out in 5 minutes. Avoid IRS audits and DOL penalties with a plain-English
+        misclassification risk scan. Built for founders, not lawyers.
+      </p>
+
+      <a href="/scan" class="inline-flex items-center gap-2 bg-white text-[#1a2744] font-bold text-lg px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors shadow-lg">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+        Scan Your Contractor — Free
+      </a>
+      <p class="text-slate-400 text-sm mt-4">No signup required. Results in under 5 minutes.</p>
+    </div>
+  </section>
+
+  <!-- Social proof strip -->
+  <section class="bg-amber-50 border-y border-amber-200 py-5 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6 text-amber-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <span class="text-amber-800 font-medium text-sm">IRS audits contractor status <strong>up to 6 years back</strong></span>
+      </div>
+      <div class="hidden sm:block w-px h-6 bg-amber-300"></div>
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6 text-amber-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-amber-800 font-medium text-sm">One reclassification can cost <strong>$50k+</strong> in back taxes and penalties</span>
+      </div>
+      <div class="hidden sm:block w-px h-6 bg-amber-300"></div>
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6 text-amber-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="text-amber-800 font-medium text-sm">DOL enforcement actions up <strong>40%</strong> since 2022</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a2744] mb-4">How ClassifyRight works</h2>
+        <p class="text-slate-500 text-lg max-w-xl mx-auto">We apply the IRS 20-factor test and DOL economic reality test — translated into plain language.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <!-- Step 01 -->
+        <div class="text-center px-4">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#1a2744] bg-opacity-10 text-[#1a2744] mb-5">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+            </svg>
+          </div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Step 01</div>
+          <h3 class="text-lg font-bold text-[#1a2744] mb-3">Answer 16 questions</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">A guided 5-step questionnaire covering behavioral control, financial control, and relationship type — the three pillars the IRS uses.</p>
+        </div>
+        <!-- Step 02 -->
+        <div class="text-center px-4">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#1a2744] bg-opacity-10 text-[#1a2744] mb-5">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Step 02</div>
+          <h3 class="text-lg font-bold text-[#1a2744] mb-3">Get a risk score</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Receive a Low / Moderate / High risk classification with a per-factor breakdown explaining exactly which signals are triggering concern.</p>
+        </div>
+        <!-- Step 03 -->
+        <div class="text-center px-4">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#1a2744] bg-opacity-10 text-[#1a2744] mb-5">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Step 03</div>
+          <h3 class="text-lg font-bold text-[#1a2744] mb-3">Remediate with confidence</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Get plain-English action items: contract language changes, billing structure adjustments, and when to bring in an employment attorney.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we evaluate -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a2744] mb-4">What we evaluate</h2>
+        <p class="text-slate-500 text-lg max-w-xl mx-auto">Based on the IRS Common Law Rules and the DOL's ABC test framework.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-[#1a2744]">
+          <div class="mb-4">
+            <svg class="w-6 h-6 text-[#1a2744]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-800 mb-2">Behavioral Control</h3>
+          <p class="text-slate-500 text-sm">Do you direct how, when, and where the work gets done?</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-amber-500">
+          <div class="mb-4">
+            <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-800 mb-2">Financial Control</h3>
+          <p class="text-slate-500 text-sm">Who supplies tools? Is pay fixed or project-based?</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-green-500">
+          <div class="mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-800 mb-2">Relationship Type</h3>
+          <p class="text-slate-500 text-sm">Is there a written contract? Are benefits provided?</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border-t-4 border-red-500">
+          <div class="mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-slate-800 mb-2">Multi-Client Activity</h3>
+          <p class="text-slate-500 text-sm">Does the contractor work with other businesses?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1a2744] mb-4">Simple, transparent pricing</h2>
+        <p class="text-slate-500 text-lg">Start free. Upgrade when you need more scans, exports, or team features.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
+
+        <!-- Starter -->
+        <div class="relative rounded-2xl border bg-white border-slate-200 shadow-sm hover:shadow-md p-8 flex flex-col gap-6 transition-shadow text-slate-800">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest mb-1 text-slate-500">Starter</p>
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-[#1a2744]">Free</span>
+            </div>
+            <p class="text-sm mt-2 text-slate-500">Perfect for a single hire you want to double-check.</p>
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">1 contractor scan per month</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Risk score with factor breakdown</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Top 3 remediation actions</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Plain-English plain</span>
+            </li>
+          </ul>
+          <a href="/scan" class="block text-center text-sm font-semibold py-3 px-6 rounded-xl transition-colors bg-[#1a2744] text-white hover:bg-[#243460]">Start Free Scan</a>
+        </div>
+
+        <!-- Pro (highlighted) -->
+        <div class="relative rounded-2xl border bg-[#1a2744] border-[#243460] shadow-2xl p-8 flex flex-col gap-6 transition-shadow text-white scale-105">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span class="bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most Popular</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest mb-1 text-slate-300">Pro</p>
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white">$19</span>
+              <span class="text-sm font-medium text-slate-400">/mo</span>
+            </div>
+            <p class="text-sm mt-2 text-slate-300">For founders managing a small contractor roster.</p>
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-200">10 contractor scans per month</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-200">Quarterly automatic rescans</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-200">PDF audit report export</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-200">Email risk change alerts</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-200">Priority support</span>
+            </li>
+          </ul>
+          <a href="/scan" class="block text-center text-sm font-semibold py-3 px-6 rounded-xl transition-colors bg-white text-[#1a2744] hover:bg-slate-100">Start Pro Trial</a>
+        </div>
+
+        <!-- Team -->
+        <div class="relative rounded-2xl border bg-white border-slate-200 shadow-sm hover:shadow-md p-8 flex flex-col gap-6 transition-shadow text-slate-800">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest mb-1 text-slate-500">Team</p>
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-[#1a2744]">$49</span>
+              <span class="text-sm font-medium text-slate-500">/mo</span>
+            </div>
+            <p class="text-sm mt-2 text-slate-500">For ops teams managing contractors at scale.</p>
+          </div>
+          <ul class="flex flex-col gap-3 flex-1">
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">25 contractor scans per month</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">5 team member seats</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Slack risk alerts</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">CSV bulk import</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Quarterly rescans + history</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm">
+              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="text-slate-600">Dedicated onboarding call</span>
+            </li>
+          </ul>
+          <a href="#" class="block text-center text-sm font-semibold py-3 px-6 rounded-xl transition-colors bg-[#1a2744] text-white hover:bg-[#243460]">Talk to Sales</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 px-4 bg-[#1a2744] text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <svg class="w-14 h-14 mx-auto mb-6 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Don't wait for an audit letter</h2>
+      <p class="text-slate-300 text-lg mb-8">
+        The IRS can assess back payroll taxes, interest, and penalties retroactively. A 5-minute
+        scan now is worth far more than a $50k+ surprise later.
+      </p>
+      <a href="/scan" class="inline-flex items-center gap-2 bg-white text-[#1a2744] font-bold text-lg px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors">
+        Run Your Free Scan Now
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1a2744] text-slate-400 text-sm mt-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 ClassifyRight. Not legal advice. For informational purposes only.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms</a>
+        <a href="#" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
